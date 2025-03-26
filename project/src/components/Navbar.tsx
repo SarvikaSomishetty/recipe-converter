@@ -25,7 +25,7 @@ export default function Navbar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `flex items-center gap-2 ${isActive ? 'text-blue-600' : 'text-gray-600'} hover:text-blue-600 transition-colors`
+                `flex items-center gap-2 text-${isActive ? 'blue-600' : 'gray-600'} hover:text-blue-600 transition-colors`
               }
             >
               <Home className="w-5 h-5" />
@@ -34,7 +34,7 @@ export default function Navbar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `flex items-center gap-2 ${isActive ? 'text-blue-600' : 'text-gray-600'} hover:text-blue-600 transition-colors`
+                `flex items-center gap-2 text-${isActive ? 'blue-600' : 'gray-600'} hover:text-blue-600 transition-colors`
               }
             >
               <Info className="w-5 h-5" />

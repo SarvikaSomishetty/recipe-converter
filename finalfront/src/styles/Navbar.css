@@ -1,0 +1,70 @@
+/* 🌸 Navbar Styling */
+.navbar {
+    background: var(--bg-color, #fce4ec); /* Pastel Pink */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* 🏠 Navbar Container */
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* 📌 Navbar Logo */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-family: "Pacifico", cursive;
+    color: var(--accent-color, #ff85a2);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* 🌐 Navbar Links */
+  .navbar-links {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: "Nunito", sans-serif;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: var(--accent-color, #ff5c85);
+    transform: translateY(-2px);
+  }
+  
+  /* 🔵 Active Link */
+  .navbar-links .active {
+    color: var(--accent-color, #ff5c85);
+    font-weight: bold;
+  }
+  
+  /* 🍔 Responsive Navbar (For Mobile Screens) */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .navbar-links {
+      margin-top: 10px;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  

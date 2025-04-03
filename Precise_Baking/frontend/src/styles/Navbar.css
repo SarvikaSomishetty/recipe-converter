@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .navbar {
+    @apply bg-[#fce4ec] shadow-md py-4 sticky top-0 z-[1000];
+  }
+
+  .navbar-container {
+    @apply flex justify-between items-center max-w-[1200px] mx-auto px-5;
+  }
+
+  .navbar-logo {
+    @apply flex items-center text-3xl font-bold cursor-pointer;
+    font-family: "Pacifico", cursive;
+    color: #ff85a2;
+  }
+
+  .navbar-links {
+    @apply flex gap-6;
+  }
+
+  .navbar-links a {
+    @apply no-underline text-lg transition-all duration-300;
+    font-family: "Nunito", sans-serif;
+    color: #555;
+  }
+
+  .navbar-links a:hover {
+    @apply text-[#ff5c85] -translate-y-0.5;
+  }
+
+  .navbar-links .active {
+    @apply text-[#ff5c85] font-bold;
+  }
+}
+
+/* ✅ Move media query OUTSIDE @layer */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

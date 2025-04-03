@@ -1,0 +1,23 @@
+/* Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .app-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #fce4ec, #fde2e4, #f8c8dc); /* Your existing gradient */
+  }
+
+  .content-container {
+    position: relative;
+    z-index: 1;
+  }

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+    font-size: 14px; /* Default is usually 16px - reduces all rem sizes */
+  }
+  /* In your index.css */
+@layer base {
+    html {
+      font-size: 12px; /* Mobile base */
+    }
+    @media (min-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    }
+    @media (min-width: 1024px) {
+      html {
+        font-size: 16px;
+      }
+    }
+  }

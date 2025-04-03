@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .about-page {
+        @apply flex flex-col items-center text-center min-h-screen py-[60px] px-5;
+        background: linear-gradient(to bottom, #fce4ec, #fde2e4, #f8c8dc);
+        animation: floatBg 10s infinite alternate ease-in-out;
+    }
+    
+  .about-title {
+    @apply font-serif text-4xl font-semibold text-[#ff85a2];
+    text-shadow: 1px 1px 10px rgba(255, 200, 220, 0.6);
+  }
+
+  .about-subtitle {
+    @apply text-xl font-serif text-gray-800 max-w-[500px] mx-auto;
+  }
+
+  .feature-grid {
+    @apply grid gap-5 max-w-[1000px] mx-auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    @apply md:grid-cols-2 lg:grid-cols-3;
+}
+
+
+  .feature-card {
+    @apply bg-[#fffafc] p-5 rounded-xl shadow-md transition-all duration-300;
+  }
+
+  .feature-card:hover {
+    @apply scale-105 shadow-lg;
+  }
+
+  .feature-header {
+    @apply flex items-center gap-2.5 mb-2.5;
+  }
+
+  .feature-icon {
+    @apply w-[25px] h-[30px] text-[#ff85a2];
+  }
+
+  .feature-title {
+    @apply font-serif text-xl font-bold text-gray-800;
+  }
+
+  .feature-text {
+    @apply font-serif text-base text-gray-800;
+  }
+
+
+  .about-image-section {
+    @apply flex flex-col items-center justify-center w-full mt-12;
+}
+
+.about-image {
+    @apply w-[80%] max-w-[600px] rounded-2xl shadow-lg object-cover;
+    height: auto; /* Ensures proper aspect ratio */
+}
+
+
+
+
+.about-page-content {
+    @apply flex flex-col items-center text-center max-w-[800px] mt-8 px-4;
+}
+
+
+  .about-image-text {
+    @apply font-serif text-xl text-gray-800 max-w-[600px] mx-auto mt-5;
+  }
+
+  .home-button {
+    @apply bg-[#fffafc] px-4 py-2.5 rounded-lg shadow-sm 
+    font-serif text-gray-800 cursor-pointer flex items-center gap-2 
+    transition-all duration-300 self-start;
+}
+
+
+  .home-button:hover {
+    @apply bg-[#ff85a2] text-white shadow-md;
+  }
+
+  .home-button-icon {
+    @apply w-[18px] h-[18px];
+  }
+}
+
+@keyframes floatBg {
+    0% { transform: translateY(0px); };
+    50% { transform: translateY(5px); };
+    100% { transform: translateY(0px); };
+  }
+  

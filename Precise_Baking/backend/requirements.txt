@@ -1,0 +1,2 @@
+flask==2.3.2             # Stable Flask version
+gunicorn==21.2.0         # Production WSGI server
